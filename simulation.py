@@ -7,7 +7,7 @@ import time  # Import time for tracking monkey starvation
 
 def generate_terrain(rows, cols, scale=5):
     """
-    Generate a 2D terrain matrix using Perlin noise.
+    Generate a 2D terrain matrix using Perlin noise. Tiles are categorized as either Water, Meadow or Forest.
     """
     noise = PerlinNoise(octaves=3, seed=random.randint(0, 1000000))
     matrix = np.zeros((rows, cols), dtype=int)
